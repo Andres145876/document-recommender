@@ -1,0 +1,12 @@
+Command executed:
+python recommender.py --evaluate --save evidencias/category_evaluation.txt
+
+Category coherence (fraction of the Top-5 that shares the seed's category)
+------------------------------------------------------------------------------------------
+Policy/Process         documents: 10  average: 0.38
+Support/Incidents      documents: 10  average: 0.30
+FAQ                    documents: 5   average: 0.24
+Minutes                documents: 5   average: 0.40
+OVERALL                documents: 30  average: 0.33
+
+Note: this is a rough measure. A document from another category can still be relevant (for example, the VPN FAQ for a VPN ticket), so the average is not close to 1. The system groups documents by topic, not by document type.

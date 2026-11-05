@@ -1,0 +1,18 @@
+Command executed:
+python recommender.py --query "My account is locked after I changed my password" --save evidencias/test3_free_text.txt
+
+====================================================================================================
+INPUT (TEXT): My account is locked after I changed my password
+====================================================================================================
+Top-5 recommended documents (cosine similarity)
+#   ID       Score    Category             Title
+----------------------------------------------------------------------------------------------------
+1   DOC011   0.4455   Support/Incidents    Ticket: User locked out after failed password attempts
+2   DOC001   0.2713   Policy/Process       Password and Multi-Factor Authentication Policy
+3   DOC021   0.2293   FAQ                  FAQ: How do I reset my password?
+4   DOC009   0.2105   Policy/Process       Employee Offboarding and Access Revocation Process
+5   DOC025   0.1838   FAQ                  FAQ: What should I do if I lose my company laptop or phone?
+
+COMMENT
+----------------------------------------------------------------------------------------------------
+The query is written in everyday language and does not copy any title from the corpus. Even so, the first result is DOC011 (ticket about a user locked out after failed password attempts, 0.4455), which describes almost exactly that situation. DOC001 (password policy) and DOC021 (password reset FAQ) follow because they cover the same topic and share the words account, lock, and password. DOC009 (offboarding) and DOC025 (lost device FAQ) are weaker matches that only coincide on general words (account, change, password, lock). In short, the top 3 are clearly relevant and the last 2 are noise.

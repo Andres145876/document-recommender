@@ -1,0 +1,18 @@
+Command executed:
+python recommender.py --id DOC001 --save evidencias/test1_policy_process.txt
+
+====================================================================================================
+INPUT (ID): DOC001 | Policy/Process | Password and Multi-Factor Authentication Policy
+====================================================================================================
+Top-5 recommended documents (cosine similarity)
+#   ID       Score    Category             Title
+----------------------------------------------------------------------------------------------------
+1   DOC021   0.4134   FAQ                  FAQ: How do I reset my password?
+2   DOC011   0.2176   Support/Incidents    Ticket: User locked out after failed password attempts
+3   DOC003   0.2032   Policy/Process       VPN and Remote Work Policy
+4   DOC022   0.1879   FAQ                  FAQ: How do I connect to the VPN?
+5   DOC002   0.1862   Policy/Process       User Onboarding and Access Assignment Process
+
+COMMENT
+----------------------------------------------------------------------------------------------------
+The seed is the password and multi-factor authentication policy. The top result (DOC021, 0.4134) is the FAQ on resetting a password: it repeats the same rules (12 characters, uppercase, lowercase, numbers, symbols, lockout after failed attempts), so it is the most logical recommendation. DOC011 (user locked out ticket) is a real case of that policy being applied. DOC003 (VPN policy) and DOC022 (VPN FAQ) appear because of the shared multi-factor authentication requirement. DOC002 (user onboarding, 0.1862) is the weakest: it only shares general words such as access, account, email, and system. Overall, 4 of the 5 recommendations are coherent with the topic of the seed.

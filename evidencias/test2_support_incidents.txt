@@ -1,0 +1,18 @@
+Command executed:
+python recommender.py --id DOC012 --save evidencias/test2_support_incidents.txt
+
+====================================================================================================
+INPUT (ID): DOC012 | Support/Incidents | Ticket: VPN will not connect from home, authentication error
+====================================================================================================
+Top-5 recommended documents (cosine similarity)
+#   ID       Score    Category             Title
+----------------------------------------------------------------------------------------------------
+1   DOC022   0.5002   FAQ                  FAQ: How do I connect to the VPN?
+2   DOC003   0.3073   Policy/Process       VPN and Remote Work Policy
+3   DOC001   0.1545   Policy/Process       Password and Multi-Factor Authentication Policy
+4   DOC011   0.1417   Support/Incidents    Ticket: User locked out after failed password attempts
+5   DOC021   0.1304   FAQ                  FAQ: How do I reset my password?
+
+COMMENT
+----------------------------------------------------------------------------------------------------
+The seed is a ticket about a VPN that does not connect because of an authentication error. The first two results are the most useful for whoever handles the ticket: DOC022 (FAQ on connecting to the VPN, 0.5002) and DOC003 (VPN and remote work policy, 0.3073), which share terms such as VPN, error, authentication, multi-factor, connect, and ticket. DOC001 (password and MFA policy) and DOC021 (password reset FAQ) are related through multi-factor authentication and the verification code. DOC011 (locked-out ticket, 0.1417) is the weakest: it shares only generic support words such as ticket, user, device, and failed. Overall, 4 of the 5 results are coherent, and the system would help resolve the ticket by pointing to the right guide and policy.

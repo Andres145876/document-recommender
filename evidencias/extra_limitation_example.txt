@@ -1,0 +1,18 @@
+Command executed:
+python recommender.py --query "I can't log in after changing my password" --save evidencias/extra_limitation_example.txt
+
+====================================================================================================
+INPUT (TEXT): I can't log in after changing my password
+====================================================================================================
+Top-5 recommended documents (cosine similarity)
+#   ID       Score    Category             Title
+----------------------------------------------------------------------------------------------------
+1   DOC011   0.2923   Support/Incidents    Ticket: User locked out after failed password attempts
+2   DOC020   0.2052   Support/Incidents    Incident: Reporting server out of disk space
+3   DOC030   0.1780   Minutes              Minutes: Storage capacity and backup review
+4   DOC004   0.1608   Policy/Process       Production Change Management Procedure
+5   DOC028   0.1508   Minutes              Minutes: Change committee and maintenance window
+
+COMMENT
+----------------------------------------------------------------------------------------------------
+Extra example (not one of the three required tests) used in the report to show a limitation. DOC011 is still first (0.2923) because it shares change, log, and password with the query. The remaining results are wrong: DOC020 and DOC030 appear only because they contain the word "log" in the sense of log files, while DOC004 and DOC028 match only on "change" (change management). This shows that TF-IDF matches words and not meaning, so ambiguous words (log in vs. log files, change a password vs. change management) produce false positives.
