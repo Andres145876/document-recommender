@@ -10,17 +10,17 @@ The corpus is simulated: 30 documents from a fictional IT services company ("Alt
 
 ```
 document-recommender/
-├── recommender.py         # Source code (loading, cleaning, TF-IDF, cosine, interface)
-├── corpus.csv             # Dataset: id, title, text, category (30 documents)
-├── requirements.txt       # Dependencies
+├── recommender.py         
+├── corpus.csv             
+├── requirements.txt       
 ├── README.md
-├── report.pdf             # 1-2 page report with the video link
-└── evidencias/            # Evidence of the tests
-    ├── test1_policy_process.txt       # Test 1: seed DOC001
-    ├── test2_support_incidents.txt    # Test 2: seed DOC012
-    ├── test3_free_text.txt            # Test 3: free-text query
-    ├── extra_limitation_example.txt   # Extra: example of a limitation
-    └── category_evaluation.txt        # Extra: coherence by category
+├── report.pdf             
+└── evidencias/            
+    ├── test1_policy_process.txt       
+    ├── test2_support_incidents.txt    
+    ├── test3_free_text.txt            
+    ├── extra_limitation_example.txt   
+    └── category_evaluation.txt        
 ```
 
 ## Dependencies
@@ -122,4 +122,4 @@ python recommender.py --query "My account is locked after I changed my password"
 
 ## Reflection video
 
-Link: _PASTE THE VIDEO LINK HERE_
+Link: https://youtu.be/LFop6uEI0LI 
