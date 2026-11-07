@@ -14,7 +14,7 @@ document-recommender/
 ├── corpus.csv             
 ├── requirements.txt       
 ├── README.md
-├── report.pdf             
+├── Documentation_Activity3.pdf             
 └── evidencias/            
     ├── test1_policy_process.txt       
     ├── test2_support_incidents.txt    
